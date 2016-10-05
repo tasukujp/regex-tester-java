@@ -3,9 +3,10 @@
 ## Requirement
 * [Java8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 * [activator](https://www.lightbend.com/activator/download)
-
-* play 2.5.8
-* scala 2.11.7
+* PlayFramework 2.5.8
+* Scala 2.11.7
+* Bootstrap 3.3.7
+* jQuery 2.2.4
 
 ## Usage
 ```
