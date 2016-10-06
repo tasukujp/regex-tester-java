@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import controllers.WebJarAssets;
 import org.junit.*;
 
 import play.mvc.*;
@@ -15,6 +16,8 @@ import play.i18n.Lang;
 import play.libs.F;
 import play.libs.F.*;
 import play.twirl.api.Content;
+
+import javax.inject.Inject;
 
 import static play.test.Helpers.*;
 import static org.junit.Assert.*;
@@ -28,6 +31,9 @@ import static org.junit.Assert.*;
  */
 public class ApplicationTest {
 
+    @Inject
+    WebJarAssets webJarAssets;
+
     @Test
     public void simpleCheck() {
         int a = 1 + 1;
@@ -36,7 +42,7 @@ public class ApplicationTest {
 
     @Test
     public void renderTemplate() {
-        Content html = views.html.index.render("Your new application is ready.");
+        Content html = views.html.index.render(webJarAssets, "Your new application is ready.");
         assertEquals("text/html", html.contentType());
         assertTrue(html.body().contains("Your new application is ready."));
     }
