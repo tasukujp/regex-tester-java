@@ -5,10 +5,10 @@ import play.mvc.*;
 import views.html.*;
 
 /**
- * This controller contains an action to handle HTTP requests
- * to the application's home page.
+ * RegexController
+ * @author tasukujp
  */
-public class HomeController extends ApplicationController {
+public class RegexController extends ApplicationController {
 
     /**
      * An action that renders an HTML page with a welcome message.
